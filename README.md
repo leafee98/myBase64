@@ -16,6 +16,12 @@ g++ -c ./myBase64.cpp -o ./out/myBase64.o
 ar -r ./out/libmyBase64.a ./out/myBase64.o
 ```
 
+另外可以使用`make`来构建, 效果和命令行构建是一样的, 或者说是只不过是把命令行的命令照搬进`makefile`里面了.
+
+```
+make all
+```
+
 ### 在其他项目中使用
 
 把此项目中的`myBase64.h`头文件和生成的`libmyBase64.a`拷走, 包含在你自己的项目中, 然后在编译的时候使用以下命令即可编译.
