@@ -6,13 +6,11 @@
 
 ### 生成静态链接库
 
-可以看到`.vscode`目录中有配置好的`task`, 如果使用`vscode`可以在项目根目录创建`/out`目录后运行`pack lib`任务.
-
 使用命令行则是与配置好的`task`相同的效果, 终归`task`也只是命令行的一种便捷方式罢了, 具体命令如下:
 
 ```
 mkdir -p ./out
-g++ -c ./myBase64.cpp -o ./out/myBase64.o
+g++ -c ./src/myBase64.cpp -o ./out/myBase64.o
 ar -r ./out/libmyBase64.a ./out/myBase64.o
 ```
 
@@ -29,7 +27,8 @@ make all
 其中`lib`是静态链接库的目录, `myBase64`是生成的静态链接库(默认指定静态链接库名称后, 编译器会在名称前加上`lib`, 在加上后缀`.a`后寻找静态链接库文件)
 
 ```
-g++ -Llib -lmyBase64 {your cpp files}
+# 注意静态链接库的参数要放在最后面
+g++ {your cpp files} -Llib -lmyBase64
 ```
 
 ## 注意事项
