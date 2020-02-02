@@ -3,6 +3,7 @@
 class myBase64 {
     private:
         static char DC[64];
+        static int CD[128];
         static char digit2Char(int n);
         static int char2Digit(char c);
 
