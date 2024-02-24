@@ -2,6 +2,7 @@
 #include <cstring>
 #include <iostream>
 #include <algorithm>
+#include <cstdint>
 
 char myBase64::DC[64] = {
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
